@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+from asyncio.tasks import _leave_task
 import os
 import sys
 
@@ -15,3 +16,4 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from execute_from_command_line(sys.argv)
+        

@@ -18,3 +18,10 @@ class Lead(models.Model):
 class Agent(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+
+class profile(models, MOdel):
+    f_name = models.CharField(max_lenght=10)
+    last_name = models.CharField(max_length=10)
+    age = models.IntegerField(default=0)
+    user = models.ForeignKey("User", on_delete=models.CASCADE)
